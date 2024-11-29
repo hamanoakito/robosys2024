@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+# SPDX-FileCopyrightText: 2024 Akito Hamano
+# SPDX-License-Identifier: BSD-3-Clause
+
+import sys
+
+xlist = list(map(float, sys.stdin.readline().strip().split()))
+ylist = list(map(float, sys.stdin.readline().strip().split()))
+tmp = 0
+xylist = []
+
+for i in range(len(xlist)):
+    tmp = xlist[i] * ylist[i]
+    xylist.append(tmp)
+
+print(xlist)
+print(ylist)
+print(xylist)

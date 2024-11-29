@@ -36,4 +36,4 @@ rxaves = round(xaves,2)
 a = (rxyave - (rxave * ryave)) / (rxsave - rxaves)
 b = ((-1) * (round(a,2) * rxave)) + ryave
 
-print("xの平均:",xave, "yの平均:",yave, "x×yの平均:",xyave, "xの二乗の平均:",xsave)
+print("xの平均:", rxave, "   yの平均:", ryave, "   x*yの平均:", rxyave, "   xの二乗の平均:", rxsave, "   xの平均の二乗:", rxaves, sep='')

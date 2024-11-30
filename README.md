@@ -9,7 +9,7 @@
 以下の方法でインストールしてください
 
 次のコマンドでリポジトリをgithubから取り込む
- git clone https://github.com/hamanoakito/robosys2024
+ $ git clone https://github.com/hamanoakito/robosys2024
 
 ## 必要なソフトウェア
 - Python 

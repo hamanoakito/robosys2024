@@ -15,7 +15,7 @@ output="xの平均:2.0   yの平均:5.0   x*yの平均:10.67   xの二乗の平�
 
 out=$(echo -e 1 2 3\\n4 5 6 | ./OLS)
 
-[ "${out}" = "${output}"] || ng $LINENO
+[ "${out}" = "${output}" ] || ng $LINENO
 
 ###異常な入力###
 out=$(echo -e  あ\\nい | ./OLS)

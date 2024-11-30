@@ -8,8 +8,10 @@
 ## 実行方法
 以下の手順で実行してください
 
-- 次のコマンドでリポジトリをgithubから取り込む
- - git clone https://github.com/hamanoakito/robosys2024
+1.次のコマンドでリポジトリをgithubから取り込む
+ ```bash
+ git clone https://github.com/hamanoakito/robosys2024
+ ```
 
 ## 必要なソフトウェア
 - Python 

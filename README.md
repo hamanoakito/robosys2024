@@ -5,11 +5,11 @@
 - 最小二乗法の直線の式を求めることが出来る
 - 計算するのに必要な値を見ることが出来る
 
-## インストール方法
-以下の方法でインストールしてください
+## 実行方法
+以下の手順で実行してください
 
-次のコマンドでリポジトリをgithubから取り込む
- $ git clone https://github.com/hamanoakito/robosys2024
+- 次のコマンドでリポジトリをgithubから取り込む
+ - git clone https://github.com/hamanoakito/robosys2024
 
 ## 必要なソフトウェア
 - Python 

@@ -4,6 +4,7 @@
 
 import sys
 
+#リストの読み込み
 xlist = list(map(float, sys.stdin.readline().strip().split()))
 ylist = list(map(float, sys.stdin.readline().strip().split()))
 tmp1 = 0
@@ -11,10 +12,13 @@ tmp2 = 0
 xylist = []
 xsquare = []
 
+#使用するリストの計算
+#x*yのリスト
 for i in range(len(xlist)):
     tmp1 = xlist[i] * ylist[i]
     xylist.append(tmp1)
 
+#xの二乗のリスト
 for n in range(len(xlist)):
     tmp2 = xlist[n] * xlist[n]
     xsquare.append(tmp2)
@@ -33,7 +37,9 @@ rxyave = round(xyave,2)
 rxsave = round(xsave,2)
 rxaves = round(xaves,2)
 
+#最小二乗法の傾き
 a = (rxyave - (rxave * ryave)) / (rxsave - rxaves)
+#最小二乗法の切片
 b = ((-1) * (round(a,2) * rxave)) + ryave
 
 print("xの平均:", rxave, "   yの平均:", ryave, "   x*yの平均:", rxyave, "   xの二乗の平均:", rxsave, "   xの平均の二乗:", rxaves, sep='')

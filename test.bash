@@ -9,14 +9,16 @@ ng () {
 
 res=0
 
-###正常な入力###
+### 正常な入力 ###
 output="xの平均:2.0   yの平均:5.0   x*yの平均:10.67   xの二乗の平均:4.67   xの平均の二乗:4.0
 最小二乗法の式は y = 1.0x + 3.0"
 
+# 出力を取り込み、空白を取り除く
+cleaned_output=$(echo "$output" | sed 's/[[:space:]]//g')
 out=$(echo -e 1 2 3\\n4 5 6 | ./OLS)
 
-cleaned_output=$(echo "$output" | tr -d '[:space:]')
-cleaned_out=$(echo "$out" | tr -d '[:space:]')
+# 出力も空白を取り除く
+cleaned_out=$(echo "$out" | sed 's/[[:space:]]//g')
 
 [ "${cleaned_out}" = "${cleaned_output}" ] || ng $LINENO
 

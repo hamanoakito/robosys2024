@@ -42,5 +42,9 @@ a = (rxyave - (rxave * ryave)) / (rxsave - rxaves)
 #最小二乗法の切片
 b = ((-1) * (round(a,2) * rxave)) + ryave
 
-print("xの平均:", rxave, "   yの平均:", ryave, "   x*yの平均:", rxyave, "   xの二乗の平均:", rxsave, "   xの平均の二乗:", rxaves, sep='')
-print("最小二乗法の式は y = ", a, "x + ", b, sep='')
+print("xの平均:", rxave)
+print("yの平均:", ryave)
+print("x*yの平均:", rxyave)
+print("xの二乗の平均:", rxsave)
+print("xの平均の二乗:", rxaves)
+print("最小二乗法の式は: y = ", a, "x + ", b, sep='')

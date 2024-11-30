@@ -9,7 +9,7 @@
 以下の手順で実行してください
 
 1.次のコマンドでリポジトリをgithubから取り込む
- ```bash
+ ```
  git clone https://github.com/hamanoakito/robosys2024
  ```
 

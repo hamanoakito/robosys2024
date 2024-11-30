@@ -15,31 +15,31 @@ out=$(echo -e 1 2 3\\n4 5 6 | ./OLS)
 [ "${out}" = "$(printf "$output")"] || ng $LINENO
 
 ###異常な入力###
-out=$(echo -e  あ\\n い | ./OLS)
+out=$(echo -e  あ\\nい | ./OLS)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo -e \\n | ./OLS)
+out=$(echo -e  | ./OLS)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo -e 1 2 \\n 3 4 5 | ./OLS)
+out=$(echo -e 1 2\\n3 4 5 | ./OLS)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo -e 1 2 3 \\n 4 5 | ./OLS)
+out=$(echo -e 1 2 3\\n4 5 | ./OLS)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo -e 1 2 あ \\n 3 4 5 | ./OLS)
+out=$(echo -e 1 2 あ\\n3 4 5 | ./OLS)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo -e 1 2 a \\n 3 4 5 | ./OLS)
+out=$(echo -e 1 2 a\\n3 4 5 | ./OLS)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 
-out=$(echo -e 1000000 2000000 3000000 \\n 4000000 5000000 6000000)
+out=$(echo -e 1000000 2000000 3000000\\n4000000 5000000 6000000 | ./OLS)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" = "" ] || ng "$LINENO"
 

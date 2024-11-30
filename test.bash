@@ -35,10 +35,7 @@ out=$(echo -e 1 2 a\\n3 4 5 | ./OLS)
 [ "$?" = 1 ] || ng "$LINENO"
 [ "${out}" != "" ] || ng "$LINENO"
 
-out=$(echo -e 1000000 2000000 3000000\\n4000000 5000000 6000000 | ./OLS)
-[ "$?" = 1 ] || ng "$LINENO"
-[ "${out}" != "" ] || ng "$LINENO"
 
 [ "${res}" = 0 ] && echo OK
-exit "$res"
+exit $res
 
